@@ -2,7 +2,7 @@ name: Build
 on:
   push:
     branches:
-      - v25.05
+      - master
 
 jobs:
   prepare_release:
