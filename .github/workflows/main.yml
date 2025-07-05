@@ -43,12 +43,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y qemu-user-static binfmt-support
-
-      # 新增步骤：确保binfmt_misc已加载
-      - name: Ensure binfmt_misc is loaded
-        run: |
-          sudo modprobe binfmt_misc
-          sudo mount -t binfmt_misc binfmt_misc /proc/sys/fs/binfmt_misc
           
       - name: Upload Armbian image
         uses: amazingfate/armbian-compile-action@main
