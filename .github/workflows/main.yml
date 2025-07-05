@@ -43,10 +43,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y qemu-user-static binfmt-support
-      
-      - name: Install gki module
-        run: |
-          pip install gki
           
       - name: Upload Armbian image
         uses: amazingfate/armbian-compile-action@main
